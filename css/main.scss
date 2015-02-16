@@ -11,7 +11,7 @@ $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     30px;
+$spacing-unit:     32px;
 
 $text-color:       #111;
 $background-color: #EDEDEA;
@@ -24,9 +24,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 // Width of the content area
 $content-width:    800px;
 
-$on-palm:          600px;
 $on-laptop:        800px;
-
 
 
 // Using media queries with like this:
@@ -44,13 +42,59 @@ $on-laptop:        800px;
 
 @import "base" ;
 
-.email-form#mc_embed_signup input.email {
+.logo-container {
+  text-align: center;
+  width: 100%;
+}
+
+#main-logo {
+  margin: 0 auto;
+  width: 475px;
+}
+
+#mc_embed_signup input.email {
   border-color: darken($background-color, 25%);
   border-radius: 4px;
+  display: inline-block;
+  margin: 0;
   font-size: 16px;
+}
+
+#mc_embed_signup form {
+  padding: 0;
+}
+
+#mc_embed_signup input.button {
+  background-color: $brand-color;
+  display: inline-block;
+  font-size: 16px;
+  height: 36px;
+  line-height: 36px;
+  width: auto;
 }
 
 .main-content {
   margin: 0 auto;
   max-width: 600px;
+  padding: 0 16px;
+}
+
+.main-copy {
+  font-weight: 400;
+}
+
+.mailing-list-content {
+  border: 1px dashed darken($background-color, 25%);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.bad-joke {
+  font-size: 12px;
+}
+
+footer {
+  margin: 48px 0;
+  text-align: center;
+  width: 100%;
 }
