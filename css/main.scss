@@ -6,64 +6,123 @@
 @import 'foundation';
 
 $base-font-family: 'Raleway', sans-serif;
-$header-font-family: 'BellotaRegular', Helvetica, Arial, sans-serif;
+$brand-font-family: 'BellotaRegular', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-$spacing-unit:     32px;
 
 $text-color:       #111;
 $background-color: #EDEDEA;
 $brand-color:      #DE5842;
+$green-color:      #31A454;
+$blue-color:       #2C758A;
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-laptop:        800px;
-
-
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+@mixin ux-brand() {
+  color: $brand-color;
+  font-family: $brand-font-family;
+  font-weight: 700;
 }
-
-@import "base" ;
 
 body {
   @include grid-row();
+
+  background-color: $background-color;
   color: lighten($text-color, 15%);
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: 300;
+  line-height: $base-line-height;
+  -webkit-text-size-adjust: 100%;
 }
 
-.logo-container {
+a {
+  color: $blue-color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($blue-color, 15%);
+    text-decoration: underline;
+  }
+}
+
+.main-header {
+  @include ux-brand();
+
+  font-size: 4.8em;
+  font-style: normal;
+  text-align: center;
+
+  a {
+    @include ux-brand();
+    text-decoration: none;
+  }
+}
+
+.main-sub-header {
+  font-family: $brand-font-family;
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 32px;
+  text-align: center;
+
+  i {
+    color: $green-color;
+    margin: 0 4px;
+  }
+}
+
+.main-content {
+  @include grid-column(8, $center: true);
+  padding: 16px;
+}
+
+.main-copy {
+  font-weight: 400;
+}
+
+span.ux-brand {
+  @include ux-brand();
+}
+
+.mailing-list-content {
+  border: 1px dashed darken($background-color, 25%);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.bad-joke {
+  font-size: 12px;
+}
+
+footer {
+  margin-top: 16px;
   text-align: center;
   width: 100%;
 }
 
-#main-logo {
-  margin: -16px auto;
-  width: 50%;
+footer img {
+  display: block;
+  margin: 16px auto;
 }
 
-.main-header {
-  font-family: $header-font-family;
-  font-weight: normal;
-  font-size: 2.2em;
-  font-style: normal;
-  text-align: center;
+.footer-link-container {
+  @include grid-row();
 }
 
-.main-sub-header {
-  font-family: $header-font-family;
-  font-weight: normal;
-  font-size: 1.4em;
-  font-style: normal;
-  text-align: center;
+.footer-link-list {
+  @include inline-list();
+  @include grid-column(8, $center: true);
+
+  margin-bottom: 24px;
+}
+
+.footer-link-list li {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 #mc_embed_signup input.email {
@@ -85,50 +144,4 @@ body {
   height: 36px;
   line-height: 36px;
   width: auto;
-}
-
-.main-content {
-  @include grid-column(8, $center: true);
-  padding: 0 16px;
-}
-
-.main-copy {
-  font-weight: 400;
-}
-
-.mailing-list-content {
-  border: 1px dashed darken($background-color, 25%);
-  border-radius: 4px;
-  padding: 16px;
-}
-
-.bad-joke {
-  font-size: 12px;
-}
-
-footer {
-  margin: 48px 0;
-  text-align: center;
-  width: 100%;
-}
-
-footer img {
-  display: block;
-  margin: 16px auto 0;
-}
-
-.footer-link-container {
-  @include grid-row();
-}
-
-.footer-link-list {
-  @include inline-list();
-  @include grid-column(8, $center: true);
-}
-
-.footer-link-list li {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
