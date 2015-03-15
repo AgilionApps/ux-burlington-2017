@@ -50,6 +50,11 @@ a {
   }
 }
 
+.section-header {
+  margin: 24px 0;
+  text-align: center;
+}
+
 .main-header {
   @include ux-brand();
 
