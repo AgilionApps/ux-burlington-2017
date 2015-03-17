@@ -116,6 +116,30 @@ span.ux-brand {
   font-size: 12px;
 }
 
+.speaker-list {
+  @include block-grid(2);
+}
+
+.speaker-item img {
+  border-radius: 4px;
+}
+
+.speaker-details {
+  margin-top: 8px;
+  text-align: center;
+
+  .title {
+    font-style: italic;
+  }
+
+  a {
+    color: $brand-color;
+    display: block;
+    font-size: 1.2em;
+  }
+}
+
+
 footer {
   margin-top: 16px;
   text-align: center;
