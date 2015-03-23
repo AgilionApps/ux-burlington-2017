@@ -118,6 +118,9 @@ span.ux-brand {
 
 .speaker-list {
   @include block-grid(2);
+  @media #{$large-up} {
+    @include block-grid(3);
+  }
 }
 
 .speaker-item img {
