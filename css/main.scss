@@ -3,113 +3,112 @@
 ---
 @charset "utf-8";
 
+@import 'foundation/_settings';
 @import 'foundation';
 
-$base-font-family: 'Raleway', sans-serif;
-$brand-font-family: 'BellotaRegular', Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
+$base-font-size:   21px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-
-$text-color:       #111;
-$background-color: #EDEDEA;
-$brand-color:      #DE5842;
-$green-color:      #31A454;
-$blue-color:       #2C758A;
-
-h1, h2, h3 {
-  font-family: $brand-font-family;
+@mixin filter($filter) {
+  -webkit-filter: #{$filter};
+  filter: #{$filter};
 }
 
-@mixin ux-brand() {
-  color: $brand-color;
-  font-family: $brand-font-family;
-  font-weight: 700;
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  @media #{$medium-up} {
+    margin-bottom: 1.5rem;
+  }
+  @media #{$large-up} {
+    margin-bottom: 2rem;
+  }
 }
 
 body {
-  @include grid-row();
-
-  background-color: $background-color;
-  color: lighten($text-color, 15%);
-  font-family: $base-font-family;
+  font-family: $font-family-sans-serif;
   font-size: $base-font-size;
   font-weight: 300;
   line-height: $base-line-height;
   -webkit-text-size-adjust: 100%;
+  padding: 1rem;
 }
 
-a {
-  color: $blue-color;
-  text-decoration: none;
+.body-wrap {
+  background-color: $snow;
+}
 
-  &:hover {
-    color: darken($blue-color, 15%);
-    text-decoration: underline;
+#global-nav {
+  margin-top: .7rem;;
+  position: relative;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 90px;
   }
-}
 
-.section-header {
-  margin: 24px 0;
-  text-align: center;
-}
-
-.main-header {
-  @include ux-brand();
-
-  font-size: 2.6rem;
-  font-style: normal;
-  text-align: center;
-
-  @media #{$medium-up} {
-    font-size: 4.8em;
+  li {
+    display: inline-block;
   }
 
   a {
-    @include ux-brand();
-    text-decoration: none;
-  }
-}
+    color: $jet;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1.5rem .45rem 1.5rem 1rem;
 
-.main-sub-header {
-  font-family: $brand-font-family;
-  font-size: 1.6em;
-  font-style: normal;
-  font-weight: normal;
-  margin-bottom: 32px;
-  text-align: center;
-
-  i {
-    color: $green-color;
-    margin: 0 4px;
-
-    @media #{$small-only} {
-      display: block;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
 
-.main-content {
-  padding: 16px;
+.global-nav-logo {
+  left: .7rem;;
+  position: absolute;
+  top: 0;
 
-  @media #{$medium-up} {
-    @include grid-column(8, $center: true);
+  h1 {
+    margin: 0;
+  }
+
+  span {
+    display: none;
+  }
+
+  a[href='/'] {
+    background: $primary-color url('/images/ux-burlington-logo.svg') no-repeat 12.5px 12.5px;
+    background-size: 55px;
+    height: 80px;
+    width: 80px;
+
+    img {
+      display: block;
+      height: 50px;
+      width: 50px;
+    }
   }
 }
 
-.main-copy {
-  font-weight: 400;
+#global-main {
+  @include grid-column(12, $collapse:true);
 }
 
-span.ux-brand {
-  @include ux-brand();
-}
+section > .wrapper {
+  @include grid-row();
 
-.mailing-list-content {
-  border: 1px dashed darken($background-color, 25%);
-  border-radius: 4px;
-  padding: 16px;
+  padding: 5rem 0;
+
+  > h1,
+  > h2 {
+    text-align: center;
+  }
 }
 
 .bad-joke {
@@ -118,13 +117,27 @@ span.ux-brand {
 
 .speaker-list {
   @include block-grid(2);
-  @media #{$large-up} {
+
+  @media #{$medium-up} {
     @include block-grid(3);
   }
-}
 
-.speaker-item img {
-  border-radius: 4px;
+  @media #{$large-up} {
+    @include block-grid(4);
+
+    margin-top: 3rem;
+  }
+
+  .speaker-item {
+    @media #{$medium-up} {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  img {
+    @include filter('contrast(1.2) brightness(.85) grayscale(1)');
+  }
 }
 
 .speaker-details {
@@ -136,47 +149,57 @@ span.ux-brand {
   }
 
   a {
-    color: $brand-color;
     display: block;
-    font-size: 1.2em;
+    font-size: 1.2rem;
   }
 }
 
+#global-footer {
+  @include grid-column(12);
 
-footer {
-  margin-top: 16px;
-  text-align: center;
-  width: 100%;
+  background-color: $jet;
+  color: $white;
+  margin-bottom: 1rem;
+  padding: 4rem 0;
+
+  h4 {
+    color: $white;
+    font-size: 1rem;
+  }
 }
 
-footer img {
-  display: block;
-  margin: 16px auto;
-}
-
-.footer-link-container {
+.global-footer-columns {
   @include grid-row();
 }
 
-.footer-link-list {
-  @include inline-list();
+.global-footer-column {
+  @include grid-column(3);
 
-  margin-bottom: 24px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
 
-  @media #{$medium-up} {
-    @include grid-column(8, $center: true);
+  a {
+    color: $white;
+    font-size: .75rem;
   }
 }
 
-.footer-link-list li {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.global-footer-trailer {
+  font-size: .75rem;
+  text-align: center;
+  margin-top: 4rem;
+
+  img {
+    margin: -0.13rem .1rem 0;
+    width: 1.1rem;
+  }
 }
 
+
 #mc_embed_signup input.email {
-  border-color: darken($background-color, 25%);
+  border-color: darken($smoke, 25%);
   border-radius: 4px;
   display: inline-block;
   margin: 0;
@@ -188,10 +211,72 @@ footer img {
 }
 
 #mc_embed_signup input.button {
-  background-color: $brand-color;
+  background-color: $primary-color;
   display: inline-block;
   font-size: 16px;
   height: 36px;
   line-height: 36px;
   width: auto;
 }
+
+#mc_embed_signup_scroll {
+  text-align: center;
+}
+
+#overview {
+  text-align: center;
+
+  img {
+    display: block;
+    margin: 1.9rem auto;
+  }
+
+  h1 {
+    color: $primary-color;
+    font-family: $font-family-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0 0 .9rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+
+  .wrapper {
+    padding: 3.5rem 7rem 6rem;
+  }
+}
+
+#mailing-list-signup {
+  background-color: $smoke;
+  text-align: center;
+}
+
+#speakers {
+  h3 {
+    font-size: 1.25rem;
+    font-family: $font-family-sans-serif;
+    margin: 1.25rem 0 0;
+  }
+
+  a,
+  .title {
+    font-size: .85rem;
+    line-height: 1.25rem;
+  }
+
+  img {
+    border-radius: 1000px;
+  }
+}
+
+#sponsors {
+}
+
