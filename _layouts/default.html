@@ -4,18 +4,25 @@
 
   <body>
     <div class='body-wrap clearfix'>
-      <nav id='global-nav'>
-        <div class='global-nav-logo'>
-          <h1>
-            <a href='/'>
-            </a>
-          </h1>
-        </div>
-        <ul>
-          <li><a href='/'>Overview</a></li>
-          <li><a href='/speakers'>Speakers</a></li>
-          <li><a href='/sponsors'>Sponsors</a></li>
+      <nav id='global-nav' class='top-bar' data-topbar role='navigation'>
+        <ul class='title-area'>
+          <li class='name'>
+            <div id='global-nav-logo'>
+              <h1>
+                <a href='/'>
+                </a>
+              </h1>
+            </div>
+          </li>
+          <li class='toggle-topbar menu-icon'><a href='#'><span></span></a></li>
         </ul>
+        <section class='top-bar-section'>
+          <ul class='left'>
+            <li><a href='/'>Overview</a></li>
+            <li><a href='/speakers'>Speakers</a></li>
+            <li><a href='/sponsors'>Sponsors</a></li>
+          </ul>
+        </section>
       </nav>
 
       <main id='global-main'>
@@ -24,5 +31,9 @@
 
       {% include footer.html %}
     </div>
+
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
