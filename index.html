@@ -50,38 +50,17 @@ meta_keywords:
     <h2>Speakers</h2>
 
     <ul class='speaker-list'>
-      <li class='speaker-item'>
-        <img src='/images/speakers/sha-hwang.jpg'>
-        <div class='speaker-details'>
-          <h3>Sha Hwang</h3>
-          <span class='title'>Keynote</span>
-          <a href='https://twitter.com/shashashasha'><i class='fi-social-twitter'></i> Twitter</a>
-        </div>
-      </li>
-      <li class='speaker-item'>
-        <img src='/images/speakers/eileen-webb.jpg'>
-        <div class='speaker-details'>
-          <h3>Eileen Webb</h3>
-          <span class='title'>Keynote</span>
-          <a href='https://twitter.com/webmeadow'><i class='fi-social-twitter'></i> Twitter</a>
-        </div>
-      </li>
-      <li class='speaker-item'>
-        <img src='/images/speakers/katie-mccurdy.jpg'>
-        <div class='speaker-details'>
-          <h3>Katie McCurdy</h3>
-          <span class='title'>Designing with Empathy</span>
-          <a href='https://twitter.com/katiemccurdy'><i class='fi-social-twitter'></i> Twitter</a>
-        </div>
-      </li>
-      <li class='speaker-item'>
-        <img src='/images/speakers/jeffrey-pierce.jpg'>
-        <div class='speaker-details'>
-          <h3>Jeffrey Pierce</h3>
-          <span class='title'>Scaling UX</span>
-          <a href='https://twitter.com/jeffrey_pierce'><i class='fi-social-twitter'></i> Twitter</a>
-        </div>
-      </li>
+      {% assign speakers = site.categories.speaker | sort: 'order' %}
+      {% for speaker in speakers %}
+        <li class='speaker-item'>
+          <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
+          <div class='speaker-details'>
+            <h3>{{ speaker.title }}</h3>
+            <span class='title'>{{ speaker.talk }}</span>
+            <a href='https://twitter.com/{{ speaker.twitter }}'><i class='fi-social-twitter'></i> Twitter</a>
+          </div>
+        </li>
+      {% endfor %}
     </ul>
   </div>
 </section>
