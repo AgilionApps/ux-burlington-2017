@@ -103,7 +103,11 @@ body {
 section > .wrapper {
   @include grid-row();
 
-  padding: 5rem 0;
+  padding: 1rem 0;
+
+  @media #{$medium-up} {
+    padding: 5rem 0;
+  }
 
   > h1,
   > h2 {
@@ -234,9 +238,13 @@ section > .wrapper {
   h1 {
     color: $primary-color;
     font-family: $font-family-serif;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 900;
     margin: 0 0 .9rem;
+
+    @media #{$medium-up} {
+      font-size: 3rem;
+    }
   }
 
   h4 {
@@ -250,13 +258,19 @@ section > .wrapper {
   }
 
   .wrapper {
-    padding: 3.5rem 7rem 6rem;
+    @media #{$medium-up} {
+      padding: 3.5rem 7rem 6rem;
+    }
   }
 }
 
 #mailing-list-signup {
   background-color: $smoke;
   text-align: center;
+
+  > .wrapper {
+    padding: 1rem;
+  }
 }
 
 #speakers {
