@@ -16,6 +16,37 @@ meta_keywords:
   </div>
 </section>
 
+<section id='mailing-list-signup'>
+  <div class='wrapper'>
+    <h2>Purchase Tickets</h2>
+    <p class='sub-copy'>
+      A limited number of early bird tickets are now available. Will you join us?
+    </p>
+    <div>
+      <a href='https://ti.to/ux-burlington/2015' class='button' target='_blank'>Yes, I want to go!</a>
+    </div>
+  </div>
+</section>
+
+<section id='speakers'>
+  <div class='wrapper'>
+    <h2>Speakers</h2>
+
+    <ul class='speaker-list'>
+      {% assign speakers = site.categories.speaker | sort: 'order' %}
+      {% for speaker in speakers %}
+        <li class='speaker-item'>
+          <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
+          <div class='speaker-details'>
+            <h3>{{ speaker.title }}</h3>
+            <span class='title'>{{ speaker.talk }}</span>
+            <a href='https://twitter.com/{{ speaker.twitter }}'><i class='fi-social-twitter'></i> Twitter</a>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
 
 <section id='mailing-list-signup'>
   <div class='wrapper'>
@@ -44,24 +75,3 @@ meta_keywords:
     </div>
   </div>
 </section>
-
-<section id='speakers'>
-  <div class='wrapper'>
-    <h2>Speakers</h2>
-
-    <ul class='speaker-list'>
-      {% assign speakers = site.categories.speaker | sort: 'order' %}
-      {% for speaker in speakers %}
-        <li class='speaker-item'>
-          <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
-          <div class='speaker-details'>
-            <h3>{{ speaker.title }}</h3>
-            <span class='title'>{{ speaker.talk }}</span>
-            <a href='https://twitter.com/{{ speaker.twitter }}'><i class='fi-social-twitter'></i> Twitter</a>
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
