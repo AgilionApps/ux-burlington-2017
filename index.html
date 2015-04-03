@@ -36,12 +36,13 @@ meta_keywords:
       {% assign speakers = site.categories.speaker | sort: 'order' %}
       {% for speaker in speakers %}
         <li class='speaker-item'>
-          <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
-          <div class='speaker-details'>
-            <h3>{{ speaker.title }}</h3>
-            <span class='title'>{{ speaker.talk }}</span>
-            <a href='https://twitter.com/{{ speaker.twitter }}'><i class='fi-social-twitter'></i> Twitter</a>
-          </div>
+          <a href='{{ speaker.url }}'>
+            <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
+            <div class='speaker-details'>
+              <h3>{{ speaker.title }}</h3>
+              <h4 class='title'>{{ speaker.talk }}</h4>
+            </div>
+          </a>
         </li>
       {% endfor %}
     </ul>

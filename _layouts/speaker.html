@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  {% include header.html %}
+
+  <body>
+    <div class='body-wrap clearfix'>
+      <nav id='global-nav' class='top-bar' data-topbar role='navigation'>
+        <ul class='title-area'>
+          <li class='name'>
+            <div id='global-nav-logo'>
+              <h1>
+                <a href='/'>
+                </a>
+              </h1>
+            </div>
+          </li>
+          <li class='toggle-topbar menu-icon'><a href='#'><span></span></a></li>
+        </ul>
+        <section class='top-bar-section'>
+          <ul class='left'>
+            <li><a href='/'>Overview</a></li>
+            <li><a href='https://ti.to/ux-burlington/2015' target='_blank'>Tickets</a></li>
+            <li><a href='/speakers'>Speakers</a></li>
+            <li><a href='/sponsors'>Sponsors</a></li>
+          </ul>
+        </section>
+      </nav>
+
+      <main id='global-main'>
+        <div id='speaker'>
+          <div class='wrapper'>
+            <div class='img-wrapper'>
+              <img src="/images/speakers/{{ page.photo }}" alt="{{ page.title }}" class="speaker">
+              <h1>{{page.title}}</h1>
+              <h2>{{page.talk}}</h2>
+            </div>
+
+            <div class='speaker-copy'>
+              {{ content }}
+            </div>
+
+            <a href='https://twitter.com/{{ page.twitter }}'><i class='fi-social-twitter'></i> @{{page.twitter }}</a>
+          </div>
+        </div>
+      </main>
+
+      {% include footer.html %}
+    </div>
+
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
