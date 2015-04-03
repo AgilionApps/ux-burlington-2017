@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: speaker
 title: Jeffrey Pierce
 photo: jeffrey-pierce.jpg
 talk: Scaling UX
