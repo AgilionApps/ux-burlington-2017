@@ -28,7 +28,7 @@ h1 {
   }
 
   @media #{$large-up} {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -45,6 +45,10 @@ body {
   background-color: $snow;
 }
 
+.button .fi-arrow-right {
+  margin-left: .5rem;
+}
+
 #global-nav {
   margin-top: .7rem;;
   position: relative;
@@ -53,12 +57,9 @@ body {
     box-shadow: none;
   }
 
-  .top-bar-section {
-    ul {
-      background-color: $primary-color;
-      list-style-type: none;
-      margin: 0;
-    }
+  .top-bar-section ul {
+    list-style-type: none;
+    margin: 0;
 
     a {
       color: $white;
@@ -72,23 +73,44 @@ body {
       }
     }
 
+    .top-bar-ticket-link {
+      line-height: 1em;
+      margin-top: .4em;
+      padding: 1em;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+
     @media #{$medium-up} {
-      ul {
-        background-color: transparent;
-        padding-left: 90px;
+      &.right {
+        padding-right: 1em;
       }
 
       li {
         display: inline-block;
       }
 
-      a {
-        color: $jet;
-        text-align: left;
-        padding: 1rem .45rem 1.25rem 1rem;
+      .top-bar-ticket-link {
+        padding-bottom: 2em;
       }
     }
 
+    &.left {
+      background-color: $primary-color;
+
+      @media #{$medium-up} {
+        background-color: transparent;
+        padding-left: 90px;
+
+        a {
+          color: $jet;
+          text-align: left;
+          padding: 1rem 1rem 1.25rem;
+        }
+      }
+    }
   }
 }
 
@@ -145,6 +167,7 @@ section > .wrapper {
   > h1,
   > h2 {
     text-align: center;
+    margin-bottom: 2rem;
   }
 }
 
@@ -162,6 +185,10 @@ section > .wrapper {
   .speaker-item {
     padding-left: 2rem;
     padding-right: 2rem;
+
+    @media #{$medium-up} {
+      margin: 1.5rem 0;
+    }
   }
 
   img {
@@ -174,7 +201,8 @@ section > .wrapper {
   text-align: center;
 
   .title {
-    font-style: italic;
+    color: $aluminum;
+    font-weight: 300;
   }
 
   a {
@@ -302,7 +330,7 @@ section > .wrapper {
   }
 }
 
-#mailing-list-signup {
+.sign-up-section {
   background-color: $smoke;
   text-align: center;
 }
@@ -338,6 +366,7 @@ section > .wrapper {
   .img-wrapper {
     text-align: center;
   }
+
   img {
     border-radius: 1000px;
     max-width: 300px;
