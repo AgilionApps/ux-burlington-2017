@@ -330,8 +330,12 @@ section > .wrapper {
   }
 }
 
+.darker-section,
 .sign-up-section {
   background-color: $smoke;
+}
+
+.sign-up-section {
   text-align: center;
 }
 
@@ -374,3 +378,15 @@ section > .wrapper {
   }
 }
 
+#where-to-stay-section {
+  li {
+    list-style-type: none;
+    margin-bottom: 1rem;
+  }
+}
+
+#footnotes-section {
+  ol {
+    list-style-type: decimal;
+  }
+}
