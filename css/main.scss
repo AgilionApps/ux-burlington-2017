@@ -53,8 +53,20 @@ body {
   margin-top: .7rem;;
   position: relative;
 
+  .title-area {
+    @media #{$medium-up} {
+      z-index: 2;
+    }
+  }
+
   .top-bar.expanded .toggle-topbar a span::after {
     box-shadow: none;
+  }
+
+  .top-bar-section {
+    @media #{$medium-up} {
+      z-index: 1;
+    }
   }
 
   .top-bar-section ul {
