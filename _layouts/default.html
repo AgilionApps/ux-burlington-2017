@@ -4,31 +4,7 @@
 
   <body>
     <div class='body-wrap clearfix'>
-      <nav id='global-nav' class='top-bar' data-topbar role='navigation'>
-        <ul class='title-area'>
-          <li class='name'>
-            <div id='global-nav-logo'>
-              <h1>
-                <a href='/'>
-                </a>
-              </h1>
-            </div>
-          </li>
-          <li class='toggle-topbar menu-icon'><a href='#'><span></span></a></li>
-        </ul>
-        <section class='top-bar-section'>
-          <ul class='left'>
-            <li><a href='/'>Overview</a></li>
-            <li><a href='/speakers'>Speakers</a></li>
-            <li><a href='/schedule'>Schedule</a></li>
-            <li><a href='/location'>Location &amp; Venue</a></li>
-            <li><a href='/sponsors'>Sponsors</a></li>
-          </ul>
-          <ul class='right'>
-            <li><a href='https://ti.to/ux-burlington/2015' class='top-bar-ticket-link button'>Buy Tickets!</a></li>
-          </ul>
-        </section>
-      </nav>
+      {% include global-nav.html %}
 
       <main id='global-main'>
         {{ content }}
