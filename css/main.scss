@@ -32,6 +32,11 @@ h1 {
   }
 }
 
+hr {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
 body {
   font-family: $font-family-sans-serif;
   font-size: $base-font-size;
@@ -343,8 +348,7 @@ section > .wrapper {
   }
 }
 
-.darker-section,
-.sign-up-section {
+.darker-section {
   background-color: $smoke;
 }
 
