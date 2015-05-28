@@ -427,3 +427,29 @@ section > .wrapper {
     text-align: center;
   }
 }
+
+.tech-jam .main-sub-header img {
+  width: 100%;
+
+  @media #{$medium-up} {
+    width: 50%;
+  }
+}
+
+.tech-jam-signup {
+  margin: 2.25rem 0;
+}
+
+.tech-jam-signup#mc_embed_signup form {
+  text-align: center;
+}
+
+.tech-jam-images {
+  @include grid-row();
+}
+
+.tech-jam-images img {
+  @media #{$medium-up} {
+    @include grid-column(6);
+  }
+}
