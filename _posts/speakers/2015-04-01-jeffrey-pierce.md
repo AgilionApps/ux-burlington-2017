@@ -6,6 +6,7 @@ talk: Scaling UX
 twitter: jeffrey_pierce
 category: speaker
 order: 4
+vimeo_id: 131223481
 ---
 
 A wise individual once told me that if I wanted to look smart in meetings, there are few sure-fire ways; 1) Draw Venn diagrams, 2) Repeat the last thing the lead engineer said very, very slowly, 3) Ask everyone to 'Take a step back', and most importantly 4) ask 'Will this scale' about anything. Databases, personas, text fields. Literally anything.

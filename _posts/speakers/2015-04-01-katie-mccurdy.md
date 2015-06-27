@@ -6,6 +6,7 @@ talk: Designing with Empathy
 twitter: katiemccurdy
 category: speaker
 order: 3
+vimeo_id: 131223485
 ---
 
 You're under the gun. You have deadlines, developers are waiting on you, and even though you know you should probably talk to your intended users at some point, it just doesn't feel possible to fit into your workflow. And hey, if Henry Ford had asked his customers what they wanted, they would have said 'a faster horse,' right? 
