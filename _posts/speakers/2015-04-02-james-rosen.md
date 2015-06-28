@@ -6,6 +6,7 @@ talk: Making Design by Committee Work
 twitter: jamesarosen
 category: speaker
 order: 9
+vimeo_id: 131786901
 ---
 
 The phrase "design by committee" summons visions of bloated word processors, clumsy banking websites, and unfocused home pages. But it is possible to leverage the creativity, empathy, and domain knowledge of a group to create great designs.

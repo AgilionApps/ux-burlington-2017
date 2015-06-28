@@ -6,6 +6,7 @@ talk: To resist is human, to test divine! Overcoming objections to user research
 twitter: kaniasty
 category: speaker
 order: 5
+vimeo_id: 131223485
 ---
 
 If UX had a mantra, “Test early and often” could very well be it. In all my years of usability testing, I’ve yet to meet a stakeholder or client who found user feedback useless or wasteful after the fact. And yet, ensuring that research gets a place at the table continues to be a challenge. I continue to hear that there’s “no need,” “no money,” “no time” for research, and I hear it from startups, from agencies, from clients of all shapes and sizes. Why does this still happen? Why is poor user research so often doubted, postponed, or outright dismissed?

@@ -6,6 +6,7 @@ talk: Art history, culture, and color
 twitter: rgbcolor
 category: speaker
 order: 7
+vimeo_id: 131787820
 ---
 
 In this presentation, we will take a deep look into the meaning of color. We’ll address it from three perspectives:

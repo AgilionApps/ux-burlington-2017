@@ -6,6 +6,7 @@ talk: Keynote
 twitter: webmeadow
 category: speaker
 order: 2
+vimeo_id: 131223482
 ---
 
 Nothing brings UX, IA, design, and content strategy to life like launching a shiny new site: teasers fit neatly without any ellipses, images are cropped perfectly for different screen sizes, and related content is wonderfully relevant. But after a few months, things start to slip as ongoing content maintenance and creation steers the site away from its original pristine vision.

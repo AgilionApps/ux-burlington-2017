@@ -6,6 +6,7 @@ talk: Incorporating Drawing into the UX Process
 twitter: mike_tedeschi
 category: speaker
 order: 6
+vimeo_id: 131786899
 ---
 
 Picking up a pencil or whiteboard marker can be daunting, but sketching can be one of the best tools in a designer's arsenal. Through this session, we'll review the positive impact sketching can have on the UX process. We'll work through sketching methods for different screen sizes to allow for rapid paper prototyping. We'll also review how to organize and run a collaborative sketching session with colleagues and clients.

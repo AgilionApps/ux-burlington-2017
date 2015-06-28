@@ -6,6 +6,7 @@ talk: Why enterprise software sucks (and how to unsuck it)
 twitter: RianVDM
 category: speaker
 order: 8
+vimeo_id: 131223483
 ---
 
 Designing for the enterprise is really, really hard. The reason it's hard is that in most cases the people who *buy* the software and the people who *use* the software are completely different, and therefore have completely different needs.
