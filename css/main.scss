@@ -453,3 +453,8 @@ section > .wrapper {
     @include grid-column(6);
   }
 }
+
+.butterfly-quote {
+  font-style: italic;
+  font-size: 16px;
+}
