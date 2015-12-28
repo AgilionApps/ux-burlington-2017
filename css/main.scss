@@ -4,6 +4,7 @@
 @charset "utf-8";
 
 @import 'foundation/_settings';
+$anchor-font-color: #B57D0E;
 @import 'foundation';
 
 $base-font-size:   21px;
@@ -153,10 +154,9 @@ body {
 
     @media #{$medium-up} {
       background: $primary-color url('/images/ux-burlington-logo.svg') no-repeat center center;
-      background-size: 28px;
-      background-position: 12.5px 12.5px;
-      background-size: 55px;
+      background-size: 80%;
       height: 80px;
+      color: transparent;
       width: 80px;
     }
 
@@ -282,6 +282,10 @@ section > .wrapper {
   }
 }
 
+.global-footer-trailer a {
+  color: white;
+  text-transform: uppercase;
+}
 
 #mc_embed_signup input.email {
   border-color: darken($smoke, 25%);
@@ -399,12 +403,16 @@ section > .wrapper {
   li {
     list-style-type: none;
     margin-bottom: 1rem;
+    overflow: hidden;
   }
 }
 
 #footnotes-section {
   ol {
     list-style-type: decimal;
+  }
+  li {
+    overflow: hidden;
   }
 }
 
@@ -455,6 +463,17 @@ section > .wrapper {
 }
 
 .butterfly-quote {
-  font-style: italic;
   font-size: 16px;
+}
+
+.wf-loading * {
+  opacity: 0;
+}
+
+.wf-active *,
+.wf-inactive * {
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }

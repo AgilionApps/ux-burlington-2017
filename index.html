@@ -1,54 +1,25 @@
 ---
 layout: default
 title: Home
-meta_description: A User Experience Conference in Burlington, VT - June 12, 2015
+meta_description: A User Experience Conference in Burlington, VT - April 29, 2016
 meta_keywords:
 ---
 
 <section id='overview'>
   <div class='wrapper'>
-    <h4>June 12<sup>th</sup>, 2015</h4>
+    <h4>April 29<sup>th</sup>, 2016</h4>
     <h1>UX Burlington</h1>
     <h4>Burlington, Vermont</h4>
     <p>
       A single day, conference-style gathering, focused on what it really takes to build a great user experience on the web.
     </p>
     <p>
-      HD videos of all the talks are now available.
+      We are working out the details for 2016, but please <a href='#mailing-list-signup'>sign up for our mailing list</a> and we'll keep you posted!
     </p>
-
-    <div>
-      <a href='https://vimeo.com/album/3447854' class='button' target='_blank'>Take me to the videos! <i class='fi-arrow-right'></i></a>
-    </div>
   </div>
 </section>
 
-<section id='speakers'>
-  <div class='wrapper'>
-    <h2>Speakers</h2>
-
-    <ul class='speaker-list'>
-      {% assign speakers = site.categories.speaker | sort: 'order' %}
-      {% for speaker in speakers %}
-        <li class='speaker-item'>
-          <a href='{{ speaker.url }}'>
-            <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
-            <div class='speaker-details'>
-              <h3>{{ speaker.title }}</h3>
-              <h4 class='title'>{{ speaker.talk }}</h4>
-            </div>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section id='sponsors' class='darker-section'>
-  {% include sponsors.html %}
-</section>
-
-<section id='mailing-list-signup' class='sign-up-section'>
+<section id='mailing-list-signup' class='sign-up-section darker-section'>
   <div class='wrapper'>
     <h2>Sign up for the mailing list</h2>
     <p class='sub-copy'>
@@ -71,7 +42,11 @@ meta_keywords:
       <!--End mc_embed_signup-->
     </div>
     <div class='bad-joke'>
-      <sup>*</sup>We promise not to spam you or sell your email address. We will, however, keep you informed of future awesome conference plans!
+      <sup>*</sup>We promise not to spam you or sell your email address. We will, however, We will, however, try and sell you tickets.
     </div>
   </div>
+</section>
+
+<section id='sponsors'>
+  {% include sponsors.html %}
 </section>
