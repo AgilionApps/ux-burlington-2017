@@ -87,8 +87,8 @@ $include-html-global-classes: $include-html-classes;
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // We use these to define default font stacks
-$font-family-sans-serif: 'acumin-pro', Helvetica, Arial, sans-serif;
-$font-family-serif: 'lobster', Georgia, serif;
+$font-family-sans-serif: 'Raleway', Helvetica, Arial, sans-serif;
+$font-family-serif: 'BellotaRegular', Georgia, serif;
 // $font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
 
 // We use these to define default font weights
@@ -116,8 +116,8 @@ $white       : #FFFFFF;
 // $black       : #000000;
 
 // We use these as default colors throughout
-$primary-color: rgb(46, 23, 125); // red
-// $secondary-color: #e7e7e7;
+$primary-color: rgb(46, 23, 125); // purple
+$secondary-color: rgb(227, 78, 53); // orange
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;

@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 @import 'foundation/_settings';
-$anchor-font-color: #B57D0E;
+$anchor-font-color: $secondary-color;
 @import 'foundation';
 
 $base-font-size:   21px;
@@ -80,7 +80,7 @@ body {
     margin: 0;
 
     a {
-      color: $white;
+      color: #222;
       display: inline-block;
       font-size: 1rem;
       font-weight: 600;
@@ -153,17 +153,7 @@ body {
     width: 100%;
 
     @media #{$medium-up} {
-      background: $primary-color url('/images/ux-burlington-logo.svg') no-repeat center center;
-      background-size: 80%;
-      height: 80px;
-      color: transparent;
-      width: 80px;
-    }
-
-    img {
-      display: block;
-      height: 50px;
-      width: 50px;
+      display: none;
     }
   }
 }
@@ -321,7 +311,7 @@ section > .wrapper {
   }
 
   h1 {
-    color: $primary-color;
+    color: $secondary-color;
     font-family: $font-family-serif;
     font-size: 3rem;
     font-weight: 900;
@@ -350,6 +340,25 @@ section > .wrapper {
       padding-right: 7rem;
     }
   }
+}
+
+#overview .wrapper {
+  position: relative;
+  z-index: 0;
+}
+
+#overview .wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent url("/images/butterfly.svg") no-repeat center center;
+  background-size: 60%;
+  opacity: 0.05;
 }
 
 .darker-section {
@@ -436,44 +445,15 @@ section > .wrapper {
   }
 }
 
-.tech-jam .main-sub-header img {
-  width: 100%;
-
-  @media #{$medium-up} {
-    width: 50%;
-  }
-}
-
-.tech-jam-signup {
-  margin: 2.25rem 0;
-}
-
-.tech-jam-signup#mc_embed_signup form {
-  text-align: center;
-}
-
-.tech-jam-images {
-  @include grid-row();
-}
-
-.tech-jam-images img {
-  @media #{$medium-up} {
-    @include grid-column(6);
-  }
-}
-
 .butterfly-quote {
   font-size: 16px;
 }
 
-.wf-loading * {
-  opacity: 0;
-}
-
-.wf-active *,
-.wf-inactive * {
-  -webkit-transition: opacity 0.5s ease-out;
-  -moz-transition: opacity 0.5s ease-out;
-  -o-transition: opacity 0.5s ease-out;
-  transition: opacity 0.5s ease-out;
+@media #{$topbar-media-query} {
+  nav.top-bar {
+    text-align:center;
+  }
+  section.top-bar-section {
+    display: inline-block;
+  }
 }
