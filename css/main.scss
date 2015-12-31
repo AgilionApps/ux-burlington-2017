@@ -4,7 +4,7 @@
 @charset "utf-8";
 
 @import 'foundation/_settings';
-$anchor-font-color: $secondary-color;
+$anchor-font-color: $primary-color;
 @import 'foundation';
 
 $base-font-size:   21px;
@@ -56,6 +56,8 @@ body {
 }
 
 #global-nav {
+  background-color: $primary-color;
+  color: white;
   margin-top: .7rem;;
   position: relative;
 
@@ -80,7 +82,7 @@ body {
     margin: 0;
 
     a {
-      color: #222;
+      color: white;
       display: inline-block;
       font-size: 1rem;
       font-weight: 600;
@@ -303,7 +305,12 @@ section > .wrapper {
 }
 
 #overview {
+  padding: 1rem;
   text-align: center;
+
+  @media #{$large-up} {
+    padding: 3rem;
+  }
 
   img {
     display: block;
@@ -311,11 +318,11 @@ section > .wrapper {
   }
 
   h1 {
-    color: $secondary-color;
+    color: $primary-color;
     font-family: $font-family-serif;
     font-size: 3rem;
     font-weight: 900;
-    margin: 0 0 .9rem;
+    margin: 1rem 0 2rem;
 
     @media #{$medium-up} {
       font-size: 4rem;
@@ -328,14 +335,19 @@ section > .wrapper {
 
   p {
     font-size: 1.3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 0 2rem;
   }
 
   .wrapper {
-    padding: 3.5rem .7rem 6rem;
+    padding: 3rem .7rem 3rem;
 
     @media #{$medium-up} {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    @media #{$large-up} {
       padding-left: 7rem;
       padding-right: 7rem;
     }
@@ -357,7 +369,7 @@ section > .wrapper {
   height: 100%;
   z-index: -1;
   background: transparent url("/images/butterfly.svg") no-repeat center center;
-  background-size: 60%;
+  background-size: 50%;
   opacity: 0.05;
 }
 
