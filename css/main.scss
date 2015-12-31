@@ -4,6 +4,7 @@
 @charset "utf-8";
 
 @import 'foundation/_settings';
+$anchor-font-color: $primary-color;
 @import 'foundation';
 
 $base-font-size:   21px;
@@ -55,7 +56,8 @@ body {
 }
 
 #global-nav {
-  margin-top: .7rem;;
+  background-color: $primary-color;
+  color: white;
   position: relative;
 
   .title-area {
@@ -79,7 +81,7 @@ body {
     margin: 0;
 
     a {
-      color: $white;
+      color: white;
       display: inline-block;
       font-size: 1rem;
       font-weight: 600;
@@ -152,18 +154,7 @@ body {
     width: 100%;
 
     @media #{$medium-up} {
-      background: $primary-color url('/images/ux-burlington-logo.svg') no-repeat center center;
-      background-size: 28px;
-      background-position: 12.5px 12.5px;
-      background-size: 55px;
-      height: 80px;
-      width: 80px;
-    }
-
-    img {
-      display: block;
-      height: 50px;
-      width: 50px;
+      display: none;
     }
   }
 }
@@ -282,6 +273,10 @@ section > .wrapper {
   }
 }
 
+.global-footer-trailer a {
+  color: white;
+  text-transform: uppercase;
+}
 
 #mc_embed_signup input.email {
   border-color: darken($smoke, 25%);
@@ -309,7 +304,12 @@ section > .wrapper {
 }
 
 #overview {
+  padding: 1rem;
   text-align: center;
+
+  @media #{$large-up} {
+    padding: 3rem;
+  }
 
   img {
     display: block;
@@ -321,7 +321,7 @@ section > .wrapper {
     font-family: $font-family-serif;
     font-size: 3rem;
     font-weight: 900;
-    margin: 0 0 .9rem;
+    margin: 1rem 0 2rem;
 
     @media #{$medium-up} {
       font-size: 4rem;
@@ -334,18 +334,41 @@ section > .wrapper {
 
   p {
     font-size: 1.3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
     padding: 0 2rem;
   }
 
   .wrapper {
-    padding: 3.5rem .7rem 6rem;
+    padding: 3rem .7rem 3rem;
 
     @media #{$medium-up} {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    @media #{$large-up} {
       padding-left: 7rem;
       padding-right: 7rem;
     }
   }
+}
+
+#overview .wrapper {
+  position: relative;
+  z-index: 0;
+}
+
+#overview .wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: transparent url("/images/butterfly.svg") no-repeat center center;
+  background-size: 50%;
 }
 
 .darker-section {
@@ -399,12 +422,16 @@ section > .wrapper {
   li {
     list-style-type: none;
     margin-bottom: 1rem;
+    overflow: hidden;
   }
 }
 
 #footnotes-section {
   ol {
     list-style-type: decimal;
+  }
+  li {
+    overflow: hidden;
   }
 }
 
@@ -428,33 +455,15 @@ section > .wrapper {
   }
 }
 
-.tech-jam .main-sub-header img {
-  width: 100%;
-
-  @media #{$medium-up} {
-    width: 50%;
-  }
-}
-
-.tech-jam-signup {
-  margin: 2.25rem 0;
-}
-
-.tech-jam-signup#mc_embed_signup form {
-  text-align: center;
-}
-
-.tech-jam-images {
-  @include grid-row();
-}
-
-.tech-jam-images img {
-  @media #{$medium-up} {
-    @include grid-column(6);
-  }
-}
-
 .butterfly-quote {
-  font-style: italic;
   font-size: 16px;
+}
+
+@media #{$topbar-media-query} {
+  nav.top-bar {
+    text-align:center;
+  }
+  section.top-bar-section {
+    display: inline-block;
+  }
 }
