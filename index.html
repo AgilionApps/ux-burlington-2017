@@ -16,7 +16,36 @@ meta_keywords:
   </div>
 </section>
 
-<section id='mailing-list-signup' class='sign-up-section darker-section'>
+<section id='speakers' class='darker-section'>
+  <div class='wrapper'>
+    <h2>Speakers</h2>
+
+    <ul class='speaker-list'>
+      {% assign speakers = site.categories.speaker | sort: 'order' %}
+      {% for speaker in speakers %}
+        <li class='speaker-item'>
+          <a href='{{ speaker.url }}'>
+            <img src="/images/speakers/{{ speaker.photo }}" alt="{{ speaker.title }}" class="speaker">
+            <div class='speaker-details'>
+              <h3>{{ speaker.title }}</h3>
+              <h4 class='title'>{{ speaker.talk }}</h4>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <p class="text-center">We are now accepting proposals to speak at UX Burlington 2016.</p>
+    <p class="text-center">Proposals can be submitted and edited until the deadline:
+      <strong>January 29th, 2016, 11:00pm EST</strong>. </p>
+
+    <div class="text-center">
+      <a href='http://cfp.uxburlington.com/' class='button' target='_blank'>Submit a proposal<i class='fi-arrow-right'></i></a>
+    </div>
+  </div>
+</section>
+
+<section id='mailing-list-signup' class='sign-up-section'>
   <div class='wrapper'>
     <h2>Sign up for the mailing list</h2>
     <p class='sub-copy'>
@@ -40,20 +69,6 @@ meta_keywords:
     </div>
     <div class='bad-joke'>
       <sup>*</sup>We promise not to spam you or sell your email address. We will, however, We will, however, try and sell you tickets.
-    </div>
-  </div>
-</section>
-
-<section id='speakers'>
-  <div class='wrapper'>
-    <h2>Speakers</h2>
-
-    <p class="text-center">We are now accepting proposals to speak at UX Burlington 2016.</p>
-    <p class="text-center">Proposals can be submitted and edited until the deadline:
-      <strong>January 29th, 2016, 11:00pm EST</strong>. </p>
-
-    <div class="text-center">
-      <a href='http://cfp.uxburlington.com/' class='button' target='_blank'>Submit a proposal<i class='fi-arrow-right'></i></a>
     </div>
   </div>
 </section>

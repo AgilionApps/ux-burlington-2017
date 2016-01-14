@@ -193,6 +193,7 @@ section > .wrapper {
   .speaker-item {
     padding-left: 2rem;
     padding-right: 2rem;
+    text-align: center;
 
     @media #{$medium-up} {
       margin: 1.5rem 0;
@@ -201,7 +202,11 @@ section > .wrapper {
 
   img {
     @include filter('contrast(1.2) brightness(.85) grayscale(1)');
-    width: 100%;
+    width: 75%;
+
+    @media #{$medium-up} {
+      width: 100%;
+    }
   }
 }
 
