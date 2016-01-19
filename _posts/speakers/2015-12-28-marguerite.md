@@ -2,10 +2,10 @@
 layout: speaker
 title: Marguerite Dibble
 photo: marguerite.jpg
-talk: GameTheory
+talk: CEO GameTheory
 twitter: Marguerite0214
 category: speaker
-order: 2
+order: 3
 vimeo_id:
 ---
 
