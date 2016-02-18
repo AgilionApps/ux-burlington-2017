@@ -5,7 +5,7 @@ photo: marguerite.jpg
 talk: CEO GameTheory
 twitter: Marguerite0214
 category: speaker
-order: 3
+order: 5
 vimeo_id:
 ---
 
