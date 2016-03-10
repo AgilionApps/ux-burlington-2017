@@ -2,7 +2,7 @@
 layout: speaker
 title: Marguerite Dibble
 photo: marguerite.jpg
-talk: CEO GameTheory
+talk: Game Design Meets UX
 twitter: Marguerite0214
 category: speaker
 order: 5
